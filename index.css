@@ -1,21 +1,230 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-}
-.test {
-    color: rgb(252, 252, 252);
-    font-family: monospace;
-    background: #888;
-    margin: 0;
-} 
-
-p {
-    margin: 0;
-    padding: 0;
-    display: inline;
+    box-sizing: border-box;
+    --primary: #4b87ff;
+    --primary-light: #6e9cf7;
+    --secondary: #ff8562;
+    --gray: #2e2d33;
+    font-family: 'Raleway';
 }
 
-.te {
-    display: inline;
-    gap: 10px;
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+.button-primary {
+    font-weight: 700;
+    border: none;
+    border-radius: 0.8rem;
+    width: 10rem;
+    height: 3rem;
+    background: var(--primary);
+    color: #fff;
+    transition: 0.2s;
+}
+
+.button-primary:hover {
+    background: var(--primary-light);
+}
+
+.button-primary:active {
+    transform: scale(0.95);
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    max-width: 1340px;
+    padding: 5px 15px;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.header .container {
+    display: grid;
+    grid-template-columns: 15rem 1fr 10rem;
+}
+
+.logo__box {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.header .menu {
+    display: flex;
+}
+
+.header .menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.menu__link:hover {
+   color: var(--primary);
+}
+ 
+.about {
+    position: relative;
+    height: 35em;
+    overflow: hidden;
+}
+
+.about__heading {
+    margin-top: 8rem;
+    z-index: 100;
+    width: 20rem;
+    color: var(--gray);
+    /* text-shadow: 1px 1px 20px var(--secondary); */
+}
+
+.about__heading span {
+    color: var(--primary);
+}
+
+.about-img__bg {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.qoute .container {
+    display: grid;
+    grid-template-rows: 2rem 1fr 2rem;
+}
+
+.qoute__text {
+    justify-self: center;
+    font-weight: 600;
+    width: 60%;
+}
+
+.qoute__author {
+    justify-self: end;
+    opacity: 0.8;
+}
+
+.authors-block__heading {
+    width: 100%;
+    text-align: center;
+}
+
+.authors-block__info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.masha, .petr {
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    background: #4b87ff;
+    overflow: hidden;
+}
+
+.masha img, .petr img {
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    background: #4b87ff;
+    overflow: hidden;
+}
+
+.cards-block {
+    padding: 20px 0 ;
+}
+
+.cards__heading {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cards-block__card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 20rem;
+    height: 20rem;
+    box-shadow: black 0px 0px 10px; 
+    border-radius: 1rem;
+}
+
+.cards-block__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.cards-block__card {
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cards-block__card:hover {
+    transform: scale(1.05);
+}
+
+.cards-block__card-logo {
+    height: 10rem;
+    overflow: hidden;
+}
+
+.cards-block__card-logo img {
+    height: 100%;
+    width: 100%
+}
+
+.cards-block__card-text {
+    max-height: 10rem;
+    height: 10rem;
+    padding: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-clamp: 3;
+}
+
+.footer {
+    background: var(--secondary);
+}
+
+.footer .container {
+    display: grid;
+    justify-content: space-between;
+    grid-auto-flow: column;
+    align-items: center;
 }
