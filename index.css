@@ -101,7 +101,7 @@ a {
 .about__heading {
     margin-top: 8rem;
     z-index: 100;
-    width: 20rem;
+    width: 26rem;
     color: var(--gray);
     /* text-shadow: 1px 1px 20px var(--secondary); */
 }
@@ -227,4 +227,5 @@ a {
     justify-content: space-between;
     grid-auto-flow: column;
     align-items: center;
-}
+} 
+
