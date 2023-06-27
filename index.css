@@ -220,6 +220,7 @@ a {
 
 .footer {
     background: var(--secondary);
+    margin-top: auto;
 }
 
 .footer .container {
